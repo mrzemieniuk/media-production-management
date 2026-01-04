@@ -10,6 +10,7 @@ services:
       - /var/www/html/var
       - /var/www/html/vendor
       - /var/www/html/public/bundles
+      - /var/www/html/config/jwt
     environment:
       DATABASE_URL: mysql://root:password@db:3306/mpm
     depends_on:

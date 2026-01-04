@@ -19,6 +19,8 @@ RUN composer run-script post-install-cmd
 
 RUN chown -R www-data:www-data /var/www/html
 
+RUN php bin/console lexik:jwt:generate-keypair
+
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
